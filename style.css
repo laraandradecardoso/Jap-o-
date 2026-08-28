@@ -162,7 +162,14 @@ li {
 .imagem-arredondada {
     border: 2px solid #e2e8f0;
 }
-
+.imagem-arredondada {
+    max-width: 300px; /* Altere 300px para o tamanho desejado */
+    height: auto;     /* Mantém a proporção */
+    display: block;  /* Necessário para centralizar com margin */
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+}
 /* Estilo do Botão criado via JS (Item 14) */
 .btn-topo {
     position: fixed;
