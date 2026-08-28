@@ -1,33 +1,33 @@
 // ==========================================================================
-// CÓDIGO JAVASCRIPT NATIVO - BOTÃO "VOLTAR AO TOPO" (REQUISITO 14)
+// Item 14 do Requisito: Criação do Botão "Voltar ao Topo" via JavaScript
 // ==========================================================================
 
 document.addEventListener("DOMContentLoaded", function () {
-    // REQUISITO 14: Criar o botão inteiramente pelo JS utilizando document.createElement()
-    const topButton = document.createElement("button");
+    // 1. Criar o elemento do botão dinamicamente
+    const btnTopo = document.createElement("button");
 
-    // REQUISITO 14: Definir o texto ou símbolo do botão pelo JavaScript
-    topButton.innerHTML = "&#9650;"; // Símbolo de seta para cima
+    // 2. Definir o conteúdo/símbolo e atributos de acessibilidade
+    btnTopo.innerHTML = "&#9650;"; // Símbolo de seta para cima (▲)
+    btnTopo.setAttribute("aria-label", "Voltar ao topo da página");
 
-    // REQUISITO 14: Adicionar classe CSS e texto de acessibilidade (aria-label)
-    topButton.classList.add("back-to-top-btn");
-    topButton.setAttribute("aria-label", "Voltar ao topo da página");
+    // 3. Adicionar classe para estilização CSS
+    btnTopo.classList.add("btn-topo");
 
-    // REQUISITO 14: Inserir o botão na página utilizando appendChild()
-    document.body.appendChild(topButton);
+    // 4. Inserir o botão no corpo (body) do documento
+    document.body.appendChild(btnTopo);
 
-    // REQUISITO 14: Adicionar evento de rolagem (scroll) com addEventListener()
+    // 5. Mostrar/Ocultar o botão baseado na rolagem da página
     window.addEventListener("scroll", function () {
-        // O botão aparece apenas se o usuário rolar mais de 300px para baixo
+        // Exibe o botão quando a rolar mais de 300px para baixo
         if (window.scrollY > 300) {
-            topButton.classList.add("visible");
+            btnTopo.classList.add("visivel");
         } else {
-            topButton.classList.remove("visible");
+            btnTopo.classList.remove("visivel");
         }
     });
 
-    // REQUISITO 14: Evento de clique para retornar ao topo com deslocamento suave (behavior: "smooth")
-    topButton.addEventListener("click", function () {
+    // 6. Adicionar evento de clique para realizar a rolagem suave até o topo
+    btnTopo.addEventListener("click", function () {
         window.scrollTo({
             top: 0,
             behavior: "smooth"
