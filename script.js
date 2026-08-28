@@ -1,24 +1,28 @@
-// ==========================================================================
-// Item 14 do Requisito: Criação do Botão "Voltar ao Topo" via JavaScript
-// ==========================================================================
+// ===================================================
+// BOTÃO "VOLTAR AO TOPO" (Seção 14)
+// Criado 100% via JavaScript Nativo
+// ===================================================
 
 document.addEventListener("DOMContentLoaded", function () {
-    // 1. Criar o elemento do botão dinamicamente
+    
+    // 1. Criar o elemento button (Seção 14)
     const btnTopo = document.createElement("button");
 
-    // 2. Definir o conteúdo/símbolo e atributos de acessibilidade
-    btnTopo.innerHTML = "&#9650;"; // Símbolo de seta para cima (▲)
-    btnTopo.setAttribute("aria-label", "Voltar ao topo da página");
+    // 2. Definir o texto/símbolo do botão (Seção 14)
+    btnTopo.innerHTML = "▲ Topo";
 
-    // 3. Adicionar classe para estilização CSS
+    // 3. Adicionar classe para estilização CSS (Seção 14)
     btnTopo.classList.add("btn-topo");
 
-    // 4. Inserir o botão no corpo (body) do documento
+    // 4. Adicionar atributo de acessibilidade aria-label (Seção 14)
+    btnTopo.setAttribute("aria-label", "Voltar ao topo da página");
+
+    // 5. Inserir o botão no final do body (Seção 14)
     document.body.appendChild(btnTopo);
 
-    // 5. Mostrar/Ocultar o botão baseado na rolagem da página
+    // 6. Evento para monitorar a rolagem da página (Seção 14)
     window.addEventListener("scroll", function () {
-        // Exibe o botão quando a rolar mais de 300px para baixo
+        // Aparece somente após rolar 300px
         if (window.scrollY > 300) {
             btnTopo.classList.add("visivel");
         } else {
@@ -26,11 +30,11 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    // 6. Adicionar evento de clique para realizar a rolagem suave até o topo
+    // 7. Evento de clique para rolar suavemente até o topo (Seção 14)
     btnTopo.addEventListener("click", function () {
         window.scrollTo({
             top: 0,
-            behavior: "smooth"
+            behavior: "smooth" // Deslocamento suave (Seção 14)
         });
     });
 });
