@@ -4,19 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cultura Japonesa - Tradição e Modernidade</title>
-    <!-- Conectando o arquivo CSS externo -->
-    <link rel="stylesheet" href="styles.css">
+    <!-- REQUISITO 1 & GITHUB PAGES: Caminho relativo sem barra inicial -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Cabeçalho Principal (Header) -->
+    <!-- REQUISITO 3: Tag semântica <header> -->
     <header id="inicio" class="site-header">
         <div class="header-banner">
+            <!-- REQUISITO 5 & 6: Título principal h1 com a temática do site -->
             <h1>Cultura Japonesa: Entre a Tradição e a Modernidade</h1>
             <p class="subtitle">Descubra os pilares fascinantes do Japão: Alimentação, Tradições, Tecnologia, Arte e Festivais.</p>
         </div>
         
-        <!-- Menu de Navegação Semântico (Nav) -->
+        <!-- REQUISITO 3 & 4: Tag semântica <nav> e menu de navegação por links internos (href="#id") -->
         <nav class="main-nav">
             <ul>
                 <li><a href="#inicio">Início</a></li>
@@ -30,26 +31,30 @@
         </nav>
     </header>
 
-    <!-- Conteúdo Principal do Site (Main) -->
+    <!-- REQUISITO 3: Tag semântica <main> contendo o conteúdo principal -->
     <main class="main-container">
 
-        <!-- Seção 1: Alimentação -->
+        <!-- REQUISITO 3, 4 & 10: Tag <section> 1 com id para navegação e classe de borda solid -->
         <section id="alimentacao" class="content-section solid-border">
+            <!-- REQUISITO 5: Título secundário <h2> -->
             <h2>Alimentação: A Arte Gastronômica (Washoku)</h2>
             <p>A culinária tradicional japonesa, conhecida como <strong>Washoku</strong>, é reconhecida como Patrimônio Cultural Imaterial da Humanidade pela UNESCO. Ela baseia-se no respeito à natureza e no uso de ingredientes frescos e da estação.</p>
             
             <div class="grid-2col">
+                <!-- REQUISITO 3: Tag semântica <article> -->
                 <article class="card">
+                    <!-- REQUISITO 5: Título <h3> em ordem hierárquica -->
                     <h3>Gastronomia Equilibrada</h3>
                     <p>A refeição típica é estruturada no princípio <em>"Ichiju-Sansai"</em> (uma sopa e três acompanhamentos com arroz), garantindo um excelente equilíbrio nutricional e sabor sutil.</p>
                 </article>
                 <div class="media-box">
+                    <!-- REQUISITO 5, 10 & 13: Imagem com atributo alt e borda pontilhada (dotted) -->
                     <img src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=600&q=80" alt="Prato tradicional de sushi japonês preparado artesanalmente" class="styled-img image-dotted">
                 </div>
             </div>
         </section>
 
-        <!-- Seção 2: Tradições -->
+        <!-- REQUISITO 3, 4 & 10: Tag <section> 2 com id e classe de borda double -->
         <section id="tradicoes" class="content-section double-border">
             <h2>Tradições Ancestrais</h2>
             <p>Apesar de ser um dos países mais modernos do mundo, o Japão preserva com carinho seus costumes ancestrais moldados pelo Xintoísmo e pelo Budismo Zen.</p>
@@ -61,6 +66,7 @@
 
             <div class="list-container">
                 <h4>Principais Costumes do Dia a Dia:</h4>
+                <!-- REQUISITO 5: Lista ordenada <ol> e itens <li> -->
                 <ol class="custom-ol">
                     <li><strong>Ojigi:</strong> A tradicional reverência usada para saudar, agradecer ou pedir desculpas.</li>
                     <li><strong>Tirar os sapatos (Genkan):</strong> Costume de retirar os sapatos ao entrar em casas e alguns estabelecimentos para manter a higiene.</li>
@@ -69,7 +75,7 @@
             </div>
         </section>
 
-        <!-- Seção 3: Tecnologia -->
+        <!-- REQUISITO 3, 4 & 10: Tag <section> 3 com id e classe de borda dashed -->
         <section id="tecnologia" class="content-section dashed-border">
             <h2>Tecnologia e Inovação</h2>
             <p>O Japão é um líder global em inovação tecnológica, integrando soluções futuristas ao dia a dia da sociedade de forma harmoniosa.</p>
@@ -80,6 +86,7 @@
                 </div>
                 <div>
                     <p>Entre os maiores destaques da engenharia e tecnologia japonesa estão:</p>
+                    <!-- REQUISITO 5: Lista não ordenada <ul> e itens <li> -->
                     <ul class="custom-ul">
                         <li><strong>Trem-Bala (Shinkansen):</strong> Famoso mundialmente por sua extrema pontualidade, velocidade e segurança impecável.</li>
                         <li><strong>Robótica Avançada:</strong> Robôs auxiliares presentes em hospitais, hotéis e lojas de conveniência.</li>
@@ -89,7 +96,7 @@
             </div>
         </section>
 
-        <!-- Seção 4: Arte e Cultura Visual -->
+        <!-- Tag <section> 4: Arte -->
         <section id="arte" class="content-section solid-border">
             <h2>Arte Japonesa: Tradicional e Contemporânea</h2>
             <p>A expressão artística no Japão abrange desde gravuras antigas em madeira até a gigantesca indústria global de cultura pop.</p>
@@ -104,7 +111,7 @@
             </div>
         </section>
 
-        <!-- Seção 5: Festivais (Matsuri) e Curiosidades -->
+        <!-- Tag <section> 5: Festivais -->
         <section id="festivais" class="content-section double-border">
             <h2>Festivais (Matsuri) e Celebrações</h2>
             <p>Os <em>Matsuri</em> são celebrações comunitárias vivas e coloridas, repletas de danças locais, música vibrante com tambores <strong>Taiko</strong> e barracas de comidas típicas.</p>
@@ -116,6 +123,7 @@
             </ul>
         </section>
 
+        <!-- Tag <section> 6: Curiosidades e Link Externo -->
         <section id="curiosidades" class="content-section dashed-border">
             <h2>Curiosidades sobre o Japão</h2>
             <p>Confira 5 fatos marcantes que demonstram a singularidade da sociedade japonesa:</p>
@@ -124,22 +132,25 @@
                 <li>Existe uma ilha chamada Okunoshima repleta de coelhos amigáveis soltos.</li>
                 <li>A expectativa de vida é uma das mais altas do mundo, superando os 84 anos.</li>
                 <li>O papel higiênico e os banheiros públicos contam com assentos aquecidos e tecnologia avançada de higienização.</li>
-                <li>Para saber mais sobre turismo e a cultura oficial do país, acesse o <a href="https://www.japan.travel/pt/br/" target="_blank" rel="noopener noreferrer" class="external-link">Organização Nacional do Turismo do Japão (JNTO)</a>.</li>
+                <!-- REQUISITO 5: Link externo abrindo em nova aba (target="_blank") -->
+                <li>Para saber mais sobre turismo e a cultura oficial do país, acesse o site da <a href="https://www.japan.travel/pt/br/" target="_blank" rel="noopener noreferrer" class="external-link">Organização Nacional do Turismo do Japão (JNTO)</a>.</li>
             </ol>
         </section>
 
     </main>
 
-    <!-- Rodapé Semântico (Footer) -->
+    <!-- REQUISITO 3 & 6: Rodapé <footer> com as informações da aluna, turma e escola -->
     <footer class="site-footer">
         <div class="footer-content">
             <p><strong>Desenvolvido por:</strong> Estudante Lara Andrade da Silva Cardoso</p>
             <p><strong>Turma:</strong> Noturno | <strong>Disciplina:</strong> Programação Front End</p>
+            <p><strong>Professor:</strong> Alisson Lucas de Souza</p>
             <p><strong>Instituição:</strong> 3º Colégio da Polícia Militar do Paraná - Cornélio Procópio</p>
+            <p class="footer-note">Projeto desenvolvido com apoio de Inteligência Artificial para fins educacionais.</p>
         </div>
     </footer>
 
-    <!-- Arquivo JavaScript Externo -->
+    <!-- REQUISITO 1 & GITHUB PAGES: Caminho relativo sem barra inicial -->
     <script src="script.js"></script>
 </body>
 </html>
