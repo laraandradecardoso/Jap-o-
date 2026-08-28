@@ -1,0 +1,339 @@
+
+
+html {
+    /* REQUISITO 4: Deslocamento suave entre as áreas da página */
+    scroll-behavior: smooth;
+}
+
+/* REQUISITO 9: CSS Box Model (Reset universal para previsibilidade de box-sizing) */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* REQUISITO 12: Tipografia legível, tamanhos, line-height e famílias de fonte */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #F0EFEA; /* Cor de fundo geral da paleta */
+    color: #222426;            /* Cor de texto principal (garantindo contraste) */
+}
+
+/* Customização da Barra de Rolagem */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #F0EFEA;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1C2D42;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #D9381E;
+}
+
+/* --------------------------------------------------------------------------
+   REQUISITO 3 & 8: CABEÇALHO (HEADER) - SELETORES DE TAG E CLASSE
+   -------------------------------------------------------------------------- */
+.site-header {
+    background: linear-gradient(135deg, #1C2D42 0%, #111D2C 100%);
+    color: #ffffff;
+    text-align: center;         /* REQUISITO 12: text-align */
+    padding: 45px 20px 0 20px;  /* REQUISITO 9: Padding */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* REQUISITO 5 & 12: Manutenção da hierarquia de títulos (h1, h2, h3) */
+.header-banner h1 {
+    font-size: 2.3rem;         /* REQUISITO 12: font-size */
+    color: #ffffff;
+    margin-bottom: 10px;      /* REQUISITO 9: Margin */
+    font-weight: 700;          /* REQUISITO 12: font-weight */
+    letter-spacing: 0.5px;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: #CBD5E1;
+    margin-bottom: 30px;
+}
+
+/* --------------------------------------------------------------------------
+   REQUISITO 4 & 11: MENU DE NAVEGAÇÃO - FLEXBOX E SELETORES DESCENDENTES
+   -------------------------------------------------------------------------- */
+.main-nav {
+    background-color: #111D2C;
+    padding: 12px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 3px solid #D9381E; /* Borda da cor de destaque */
+}
+
+/* REQUISITO 11: Display Flex, gap, justify-content e align-items */
+.main-nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 15px;
+}
+
+/* REQUISITO 8: Seletor descendente (nav a / .main-nav a) */
+.main-nav a {
+    color: #F8FAFC;
+    text-decoration: none;     /* REQUISITO 12: text-decoration */
+    font-weight: 600;
+    padding: 8px 18px;
+    border-radius: 20px;       /* REQUISITO 9: border-radius */
+    transition: all 0.3s ease;
+}
+
+/* REQUISITO 4 & 8: Destaque visual em links com a pseudoclasse :hover */
+.main-nav a:hover {
+    background-color: #D9381E; /* Cor de destaque */
+    color: #ffffff;
+    box-shadow: 0 2px 8px rgba(217, 56, 30, 0.4);
+}
+
+/* --------------------------------------------------------------------------
+   REQUISITO 9 & 11: ESTRUTURA DO CONTEÚDO PRINCIPAL (MAIN E SECTION)
+   -------------------------------------------------------------------------- */
+.main-container {
+    max-width: 1000px;         /* REQUISITO 9 & 11: max-width para o conteúdo principal */
+    margin: 35px auto;         /* REQUISITO 11: Centraliza o conteúdo na página */
+    padding: 0 20px;
+}
+
+.content-section {
+    background-color: #FDFBF7; /* Cor Secundária (Creme Washi Paper) */
+    padding: 35px;
+    margin-bottom: 35px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+}
+
+/* --------------------------------------------------------------------------
+   REQUISITO 10: AS 4 VARIAÇÕES OBRIGATÓRIAS DE BORDAS E ESPESSURAS
+   -------------------------------------------------------------------------- */
+/* 1. Borda contínua (solid) */
+.solid-border {
+    border: 3px solid #D9381E;
+}
+
+/* 2. Borda dupla (double) */
+.double-border {
+    border: 5px double #1C2D42;
+}
+
+/* 3. Borda tracejada (dashed) */
+.dashed-border {
+    border: 3px dashed #94A3B8;
+}
+
+/* 4. Borda pontilhada (dotted) — Aplicada nas imagens (Seção 13) */
+.image-dotted {
+    border: 4px dotted #D9381E;
+}
+
+/* --------------------------------------------------------------------------
+   REQUISITO 5 & 12: ESTILIZAÇÃO E ORGANIZAÇÃO DOS TÍTULOS E TEXTOS
+   -------------------------------------------------------------------------- */
+h1, h2, h3, h4 {
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-size: 1.75rem;
+    color: #D9381E;            /* Cor de destaque */
+    border-left: 6px solid #D9381E;
+    padding-left: 12px;
+}
+
+h3 {
+    font-size: 1.3rem;
+    color: #1C2D42;            /* Cor principal */
+}
+
+h4 {
+    font-size: 1.1rem;
+    color: #334155;
+    margin-top: 15px;
+}
+
+p {
+    margin-bottom: 15px;
+    font-size: 1.02rem;
+    color: #334155;
+}
+
+/* Links externos */
+.external-link {
+    color: #D9381E;
+    font-weight: bold;
+    text-decoration: underline;
+    transition: color 0.2s ease;
+}
+
+.external-link:hover {
+    color: #991B1E;
+}
+
+/* --------------------------------------------------------------------------
+   REQUISITO 11: LAYOUT EM GRID E CARDS DE CONTEÚDO
+   -------------------------------------------------------------------------- */
+.card, .highlight-article {
+    background-color: #F1F5F9;
+    padding: 22px;
+    margin: 18px 0;
+    border-radius: 8px;
+    border-left: 4px solid #1C2D42;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover, .highlight-article:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+}
+
+/* REQUISITO 11: Uso obrigatório de display: grid e gap */
+.grid-2col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: center;
+}
+
+/* REQUISITO 5: Listas ordenadas e não ordenadas */
+.custom-ol, .custom-ul {
+    padding-left: 25px;
+    margin-bottom: 15px;
+}
+
+.custom-ol li, .custom-ul li, section ul li {
+    margin-bottom: 10px;
+}
+
+/* --------------------------------------------------------------------------
+   REQUISITO 13: TRATAMENTO E REGRAS DE IMAGENS
+   -------------------------------------------------------------------------- */
+.styled-img {
+    width: 100%;
+    max-width: 100%;            /* REQUISITO 13: Evita que ultrapassem o espaço disponível */
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: 8px;         /* REQUISITO 13: Arredondamento */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.styled-img:hover {
+    transform: scale(1.02);
+}
+
+.image-solid {
+    border: 3px solid #1C2D42;
+}
+
+.image-rounded {
+    border-radius: 14px;
+    border: 2px solid #CBD5E1;
+}
+
+.media-box {
+    text-align: center;
+}
+
+.center-media {
+    max-width: 500px;
+    margin: 25px auto;
+}
+
+/* --------------------------------------------------------------------------
+   REQUISITO 14: ESTILIZAÇÃO DO BOTÃO "VOLTAR AO TOPO" (GERADO VIA JS)
+   -------------------------------------------------------------------------- */
+.back-to-top-btn {
+    position: fixed;            /* REQUISITO 14: Posicionado no canto inferior */
+    bottom: 30px;
+    right: 30px;
+    background-color: #D9381E;  /* Cor de destaque */
+    color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    width: 52px;
+    height: 52px;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(217, 56, 30, 0.4);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;                 /* REQUISITO 14: Oculto por padrão até a rolagem */
+    pointer-events: none;
+}
+
+.back-to-top-btn.visible {
+    opacity: 1;                 /* Exibido quando acionado pela classe do JS */
+    pointer-events: auto;
+}
+
+/* REQUISITO 14: Alteração visual no botão ao passar o mouse */
+.back-to-top-btn:hover {
+    background-color: #1C2D42;  /* Transiciona para a cor principal */
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(28, 45, 66, 0.4);
+}
+
+/* --------------------------------------------------------------------------
+   REQUISITO 3: RODAPÉ SEMÂNTICO (FOOTER)
+   -------------------------------------------------------------------------- */
+.site-footer {
+    background-color: #1C2D42;  /* Cor Principal */
+    color: #F8FAFC;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 50px;
+    border-top: 5px solid #D9381E;
+}
+
+.footer-content p {
+    margin-bottom: 6px;
+    font-size: 0.95rem;
+    color: #E2E8F0;
+}
+
+.footer-note {
+    font-size: 0.85rem;
+    color: #94A3B8;
+    margin-top: 12px;
+    font-style: italic;
+}
+
+/* --------------------------------------------------------------------------
+   REQUISITO 4: RESPONSIVIDADE (TETAS MENORES)
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+    .grid-2col {
+        grid-template-columns: 1fr;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .header-banner h1 {
+        font-size: 1.8rem;
+    }
+}
