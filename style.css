@@ -1,341 +1,207 @@
 /* ==========================================================================
-   DISCIPLINA: Programação Front End
-   INSTITUIÇÃO: 3º Colégio da Polícia Militar do Paraná - Cornélio Procópio
-   PROFESSOR: Alisson Lucas de Souza
-   ESTUDANTE: Lara Andrade da Silva Cardoso (Turma: Noturno)
-   TEMA: Cultura Japonesa - Entre a Tradição e a Modernidade
-
-   REQUISITO 7 - PALETA E TEORIA DAS CORES:
-   - Harmonia Escolhida: Combinação Monocromática / Contrastante com Branco
-   - Cor Principal: #111111 (Preto Carvão Nanquim)
-   - Cor Secundária: #FFFFFF (Branco Puro)
-   - Cor de Destaque (Accent): #BC002D (Vermelho Sol Nascente)
-   - Cor de Fundo Geral: #F8F9FA (Off-White Suave)
-   - Cor de Texto Principal: #222222 (Grafite Escuro)
+   PALETA E TEORIA DE CORES UTILIZADA:
+   Harmonia: Monocromática com Destaque Análogo (Inspirada no Japão)
+   - Cor Principal (Fundo Escuro): #1A1A24 (Azul-noite profundo)
+   - Cor Secundária (Fundo Seções): #FFFFFF (Branco puro para contraste)
+   - Cor de Destaque / Ação: #BC002D (Vermelho sol nascente do Japão)
+   - Cor do Texto: #2D3748 (Cinza escuro para excelente legibilidade)
    ========================================================================== */
 
-/* --------------------------------------------------------------------------
-   REQUISITO 12 - TIPOGRAFIA E CONFIGURAÇÕES GLOBAIS
-   -------------------------------------------------------------------------- */
-html {
-    scroll-behavior: smooth;
-}
-
-*, *::before, *::after {
+/* Configurações Globais e Box Model */
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth; /* Deslocamento suave entre seções */
+}
+
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
-    background-color: #F8F9FA; /* Fundo geral off-white */
-    color: #222222;            /* Texto grafite */
+    color: #2d3748;
+    background-color: #f7fafc;
 }
 
-/* Customização da Barra de Rolagem */
-::-webkit-scrollbar {
-    width: 10px;
-}
-
-::-webkit-scrollbar-track {
-    background: #F8F9FA;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #111111;
-    border-radius: 5px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: #BC002D;
-}
-
-/* --------------------------------------------------------------------------
-   REQUISITO 3 & 8: CABEÇALHO (HEADER)
-   -------------------------------------------------------------------------- */
-.site-header {
-    background: linear-gradient(135deg, #111111 0%, #222222 100%);
+/* Cabeçalho e Menu */
+.cabecalho-principal {
+    background-color: #1a1a24;
     color: #ffffff;
+    padding: 20px;
     text-align: center;
-    padding: 45px 20px 0 20px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-.header-banner h1 {
-    font-size: 2.3rem;
-    color: #ffffff;
+.container-header h1 {
+    font-size: 2.2rem;
     margin-bottom: 10px;
-    font-weight: 700;
-    letter-spacing: 0.5px;
+    color: #ffffff;
 }
 
-.subtitle {
-    font-size: 1.1rem;
-    color: #E2E8F0;
-    margin-bottom: 30px;
+.menu-navegacao {
+    background-color: #bc002d; /* Cor de Destaque */
+    margin-top: 15px;
+    padding: 10px 0;
+    border-radius: 6px;
 }
 
-/* --------------------------------------------------------------------------
-   REQUISITO 4 & 11: MENU DE NAVEGAÇÃO
-   -------------------------------------------------------------------------- */
-.main-nav {
-    background-color: #111111;
-    padding: 12px 0;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    border-bottom: 3px solid #BC002D; /* Borda vermelha */
-}
-
-.main-nav ul {
+.menu-navegacao ul {
+    list-style: none;
     display: flex;
     justify-content: center;
-    align-items: center;
     flex-wrap: wrap;
-    list-style: none;
     gap: 15px;
 }
 
-.main-nav a {
+/* Seletor Descendente e Pseudoclasse :hover */
+nav a {
     color: #ffffff;
     text-decoration: none;
-    font-weight: 600;
-    padding: 8px 18px;
-    border-radius: 20px;
-    transition: all 0.3s ease;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
 }
 
-.main-nav a:hover {
-    background-color: #BC002D; /* Vermelho ao passar o mouse */
-    color: #ffffff;
-    box-shadow: 0 2px 8px rgba(188, 0, 45, 0.4);
+nav a:hover {
+    background-color: #1a1a24;
 }
 
-/* --------------------------------------------------------------------------
-   REQUISITO 9 & 11: ESTRUTURA DO CONTEÚDO PRINCIPAL
-   -------------------------------------------------------------------------- */
-.main-container {
+/* Conteúdo Principal (Centralizado e com Largura Máxima) */
+.conteudo-principal {
     max-width: 1000px;
-    margin: 35px auto;
+    margin: 30px auto;
     padding: 0 20px;
 }
 
-.content-section {
-    background-color: #FFFFFF; /* Fundo dos cards em BRANCO PURO */
-    padding: 35px;
-    margin-bottom: 35px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-}
-
-/* --------------------------------------------------------------------------
-   REQUISITO 10: AS 4 VARIAÇÕES OBRIGATÓRIAS DE BORDAS
-   -------------------------------------------------------------------------- */
-.solid-border {
-    border: 3px solid #BC002D;
-}
-
-.double-border {
-    border: 5px double #111111;
-}
-
-.dashed-border {
-    border: 3px dashed #CBD5E1;
-}
-
-.image-dotted {
-    border: 4px dotted #BC002D;
-}
-
-/* --------------------------------------------------------------------------
-   REQUISITO 5 & 12: TIPOGRAFIA E ELEMENTOS DE TEXTO
-   -------------------------------------------------------------------------- */
-h1, h2, h3, h4 {
-    margin-bottom: 15px;
+/* Seções e Tipografia */
+.secao-conteudo {
+    background-color: #ffffff;
+    padding: 25px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
 h2 {
-    font-size: 1.75rem;
-    color: #BC002D; /* Títulos em Vermelho */
-    border-left: 6px solid #BC002D;
-    padding-left: 12px;
+    font-size: 1.8rem;
+    color: #bc002d;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #edf2f7;
+    padding-bottom: 5px;
 }
 
 h3 {
     font-size: 1.3rem;
-    color: #111111;
+    margin: 15px 0 10px 0;
 }
 
 h4 {
     font-size: 1.1rem;
-    color: #333333;
-    margin-top: 15px;
+    margin: 15px 0 5px 0;
 }
 
 p {
     margin-bottom: 15px;
-    font-size: 1.02rem;
-    color: #333333;
 }
 
-.external-link {
-    color: #BC002D;
-    font-weight: bold;
-    text-decoration: underline;
-    transition: color 0.2s ease;
-}
-
-.external-link:hover {
-    color: #8B0000;
-}
-
-/* --------------------------------------------------------------------------
-   REQUISITO 11: CARDS E GRID
-   -------------------------------------------------------------------------- */
-.card, .highlight-article {
-    background-color: #F8F9FA;
-    padding: 22px;
-    margin: 18px 0;
-    border-radius: 8px;
-    border-left: 4px solid #111111;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover, .highlight-article:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
-}
-
-.grid-2col {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-    align-items: center;
-}
-
-.custom-ol, .custom-ul {
-    padding-left: 25px;
+ul, ol {
+    margin-left: 20px;
     margin-bottom: 15px;
 }
 
-.custom-ol li, .custom-ul li, section ul li {
-    margin-bottom: 10px;
+li {
+    margin-bottom: 5px;
 }
 
-/* --------------------------------------------------------------------------
-   REQUISITO 13: IMAGENS
-   -------------------------------------------------------------------------- */
-.styled-img {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    display: block;
-    object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s ease;
+/* Requisito de Bordas Obrigatórias (Item 10) */
+.borda-solida {
+    border: 3px solid #bc002d; /* Borda contínua (solid) */
 }
 
-.styled-img:hover {
-    transform: scale(1.02);
+.borda-tracejada {
+    border: 3px dashed #1a1a24; /* Borda tracejada (dashed) */
 }
 
-.image-solid {
-    border: 3px solid #111111;
+.borda-pontilhada {
+    border: 3px dotted #bc002d; /* Borda pontilhada (dotted) */
 }
 
-.image-rounded {
-    border-radius: 14px;
-    border: 2px solid #E2E8F0;
+.borda-dupla {
+    border: 5px double #1a1a24; /* Borda dupla (double) */
 }
 
-.media-box {
+/* Uso de Display Flex (Item 11) */
+.flex-tecnologia {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Uso de Display Grid (Item 11) */
+.grid-alimentacao {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    align-items: center;
+}
+
+/* Imagens (Item 13) */
+.caixa-imagem {
     text-align: center;
 }
 
-.center-media {
-    max-width: 500px;
-    margin: 25px auto;
+.caixa-imagem img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
 }
 
-/* --------------------------------------------------------------------------
-   REQUISITO 14: BOTÃO VOLTAR AO TOPO
-   -------------------------------------------------------------------------- */
-.back-to-top-btn {
+.imagem-arredondada {
+    border: 2px solid #e2e8f0;
+}
+
+/* Estilo do Botão criado via JS (Item 14) */
+.btn-topo {
     position: fixed;
-    bottom: 30px;
-    right: 30px;
-    background-color: #BC002D;
+    bottom: 20px;
+    right: 20px;
+    background-color: #bc002d;
     color: #ffffff;
     border: none;
     border-radius: 50%;
-    width: 52px;
-    height: 52px;
-    font-size: 22px;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
     font-weight: bold;
     cursor: pointer;
-    box-shadow: 0 4px 14px rgba(188, 0, 45, 0.4);
-    transition: all 0.3s ease;
-    z-index: 1000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     opacity: 0;
-    pointer-events: none;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease, background-color 0.3s ease;
+    z-index: 1000;
 }
 
-.back-to-top-btn.visible {
+.btn-topo.visivel {
     opacity: 1;
-    pointer-events: auto;
+    visibility: visible;
 }
 
-.back-to-top-btn:hover {
-    background-color: #111111;
-    transform: translateY(-5px);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+.btn-topo:hover {
+    background-color: #1a1a24;
 }
 
-/* --------------------------------------------------------------------------
-   REQUISITO 3: RODAPÉ (FOOTER)
-   -------------------------------------------------------------------------- */
-.site-footer {
-    background-color: #111111;
+/* Rodapé */
+.rodape-principal {
+    background-color: #1a1a24;
     color: #ffffff;
     text-align: center;
-    padding: 30px 20px;
-    margin-top: 50px;
-    border-top: 5px solid #BC002D;
+    padding: 20px;
+    margin-top: 40px;
 }
 
-.footer-content p {
-    margin-bottom: 6px;
-    font-size: 0.95rem;
-    color: #E2E8F0;
-}
-
-.footer-note {
-    font-size: 0.85rem;
-    color: #94A3B8;
-    margin-top: 12px;
-    font-style: italic;
-}
-
-/* --------------------------------------------------------------------------
-   REQUISITO 4: RESPONSIVIDADE
-   -------------------------------------------------------------------------- */
-@media (max-width: 768px) {
-    .grid-2col {
-        grid-template-columns: 1fr;
-    }
-
-    .main-nav ul {
-        flex-direction: column;
-        gap: 8px;
-    }
-
-    .header-banner h1 {
-        font-size: 1.8rem;
-    }
+.container-rodape p {
+    margin-bottom: 5px;
 }
