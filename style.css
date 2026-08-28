@@ -1,214 +1,161 @@
-/* ==========================================================================
-   PALETA E TEORIA DE CORES UTILIZADA:
-   Harmonia: Monocromática com Destaque Análogo (Inspirada no Japão)
-   - Cor Principal (Fundo Escuro): #1A1A24 (Azul-noite profundo)
-   - Cor Secundária (Fundo Seções): #FFFFFF (Branco puro para contraste)
-   - Cor de Destaque / Ação: #BC002D (Vermelho sol nascente do Japão)
-   - Cor do Texto: #2D3748 (Cinza escuro para excelente legibilidade)
-   ========================================================================== */
+/* ===================================================
+   PALETA E TEORIA DAS CORES (Seção 7)
+   Teoria Utilizada: Cores Análogas (Tons de Vermelho, Rosa e Vinho)
+   - Cor Principal: #bc002d (Vermelho Imperial Japonês)
+   - Cor Secundária: #2c3e50 (Azul Escuro / Contraste)
+   - Cor de Destaque: #e74c3c (Vermelho Coral)
+   - Fundo: #f9f9f9 (Cinza Claro)
+   - Texto: #333333 (Grafite Escuro)
+   =================================================== */
 
-/* Configurações Globais e Box Model */
-* {
-    box-sizing: border-box;
+/* Configurações Globais e Tipografia (Seção 12) */
+html {
+    scroll-behavior: smooth; /* Deslocamento suave do menu (Seção 4) */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Tipografia (Seção 12) */
+    line-height: 1.6;
+    color: #333333;
+    background-color: #f9f9f9;
     margin: 0;
     padding: 0;
 }
 
-html {
-    scroll-behavior: smooth; /* Deslocamento suave entre seções */
+/* Largura Máxima e Centralização do Conteúdo (Seção 11) */
+.container {
+    max-width: 1000px; /* max-width (Seção 9 e 11) */
+    margin: 0 auto; /* Centralização (Seção 11) */
+    padding: 20px; /* Padding (Seção 9) */
 }
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.6;
-    color: #2d3748;
-    background-color: #f7fafc;
-}
-
-/* Cabeçalho e Menu */
-.cabecalho-principal {
-    background-color: #1a1a24;
+/* Header e Navegação */
+header {
+    background-color: #bc002d;
     color: #ffffff;
     padding: 20px;
     text-align: center;
 }
 
-.container-header h1 {
-    font-size: 2.2rem;
-    margin-bottom: 10px;
-    color: #ffffff;
+/* Seletor Descendente nav a (Seção 8) */
+nav {
+    background-color: #2c3e50;
+    padding: 10px;
 }
 
-.menu-navegacao {
-    background-color: #bc002d; /* Cor de Destaque */
-    margin-top: 15px;
-    padding: 10px 0;
-    border-radius: 6px;
-}
-
-.menu-navegacao ul {
+nav ul {
     list-style: none;
-    display: flex;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Flexbox no Menu (Seção 11) */
     justify-content: center;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 15px; /* Gap (Seção 11) */
 }
 
-/* Seletor Descendente e Pseudoclasse :hover */
 nav a {
     color: #ffffff;
     text-decoration: none;
     font-weight: bold;
     padding: 8px 12px;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
+    transition: background 0.3s;
 }
 
+/* Pseudoclasse :hover no Menu (Seção 4 e 8) */
 nav a:hover {
-    background-color: #1a1a24;
+    background-color: #e74c3c;
+    border-radius: 4px;
 }
 
-/* Conteúdo Principal (Centralizado e com Largura Máxima) */
-.conteudo-principal {
-    max-width: 1000px;
-    margin: 30px auto;
-    padding: 0 20px;
-}
-
-/* Seções e Tipografia */
-.secao-conteudo {
+/* Estilização das Seções e CSS Box Model (Seção 9) */
+section {
     background-color: #ffffff;
-    padding: 25px;
-    margin-bottom: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    margin-bottom: 25px; /* Margin (Seção 9) */
+    padding: 20px; /* Padding (Seção 9) */
+    border-radius: 8px; /* Border-radius (Seção 9) */
 }
 
-h2 {
-    font-size: 1.8rem;
-    color: #bc002d;
-    margin-bottom: 15px;
-    border-bottom: 2px solid #edf2f7;
-    padding-bottom: 5px;
-}
+/* Títulos */
+h1 { font-size: 2em; margin-bottom: 10px; }
+h2 { color: #bc002d; border-bottom: 2px solid #bc002d; padding-bottom: 5px; }
+h3 { color: #2c3e50; }
 
-h3 {
-    font-size: 1.3rem;
-    margin: 15px 0 10px 0;
-}
-
-h4 {
-    font-size: 1.1rem;
-    margin: 15px 0 5px 0;
-}
-
-p {
-    margin-bottom: 15px;
-}
-
-ul, ol {
-    margin-left: 20px;
-    margin-bottom: 15px;
-}
-
-li {
-    margin-bottom: 5px;
-}
-
-/* Requisito de Bordas Obrigatórias (Item 10) */
+/* BORDAS OBRIGATÓRIAS (4 Variações) (Seção 10) */
 .borda-solida {
-    border: 3px solid #bc002d; /* Borda contínua (solid) */
+    border: 3px solid #bc002d; /* 1. Borda contínua/solid */
 }
 
 .borda-tracejada {
-    border: 3px dashed #1a1a24; /* Borda tracejada (dashed) */
+    border: 3px dashed #2c3e50; /* 2. Borda tracejada/dashed */
 }
 
 .borda-pontilhada {
-    border: 3px dotted #bc002d; /* Borda pontilhada (dotted) */
+    border: 3px dotted #e74c3c; /* 3. Borda pontilhada/dotted */
 }
 
 .borda-dupla {
-    border: 5px double #1a1a24; /* Borda dupla (double) */
+    border: 5px double #bc002d; /* 4. Borda dupla/double com espessura diferente */
 }
 
-/* Uso de Display Flex (Item 11) */
-.flex-tecnologia {
-    display: flex;
+/* Organização Visual com Flexbox e Grid (Seção 11) */
+.flex-container {
+    display: flex; /* Display Flex (Seção 11) */
+    gap: 20px;
+    align-items: center; /* Align-items (Seção 11) */
+    justify-content: space-between; /* Justify-content (Seção 11) */
+}
+
+.grid-container {
+    display: grid; /* Display Grid (Seção 11) */
+    grid-template-columns: 1fr 2fr;
     gap: 20px;
     align-items: center;
-    flex-wrap: wrap;
 }
 
-/* Uso de Display Grid (Item 11) */
-.grid-alimentacao {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-    align-items: center;
-}
-
-/* Imagens (Item 13) */
-.caixa-imagem {
-    text-align: center;
-}
-
-.caixa-imagem img {
-    max-width: 100%;
+/* Imagens Responsivas (Seção 13) */
+img {
+    max-width: 100%; /* Evita ultrapassar o espaço (Seção 13) */
     height: auto;
-    border-radius: 8px;
 }
 
 .imagem-arredondada {
-    border: 2px solid #e2e8f0;
+    border-radius: 10px; /* Arredondamento em imagem (Seção 13) */
+    border: 2px solid #ccc;
 }
-.imagem-arredondada {
-    max-width: 300px; /* Altere 300px para o tamanho desejado */
-    height: auto;     /* Mantém a proporção */
-    display: block;  /* Necessário para centralizar com margin */
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 10px;
-}
-/* Estilo do Botão criado via JS (Item 14) */
+
+/* Botão "Voltar ao topo" gerado via JavaScript (Seção 14) */
 .btn-topo {
     position: fixed;
     bottom: 20px;
     right: 20px;
     background-color: #bc002d;
-    color: #ffffff;
+    color: white;
     border: none;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    font-size: 20px;
-    font-weight: bold;
+    padding: 12px 18px;
+    border-radius: 50px;
     cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.2);
+    transition: opacity 0.3s, background-color 0.3s;
     opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.4s ease, visibility 0.4s ease, background-color 0.3s ease;
-    z-index: 1000;
+    pointer-events: none; /* Inativo quando invisível */
 }
 
 .btn-topo.visivel {
     opacity: 1;
-    visibility: visible;
+    pointer-events: auto;
 }
 
 .btn-topo:hover {
-    background-color: #1a1a24;
+    background-color: #2c3e50; /* Alteração visual no :hover (Seção 14) */
 }
 
 /* Rodapé */
-.rodape-principal {
-    background-color: #1a1a24;
-    color: #ffffff;
+footer {
+    background-color: #2c3e50;
+    color: white;
     text-align: center;
-    padding: 20px;
-    margin-top: 40px;
-}
-
-.container-rodape p {
-    margin-bottom: 5px;
+    padding: 15px;
+    margin-top: 30px;
 }
