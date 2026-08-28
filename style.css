@@ -6,23 +6,21 @@
    TEMA: Cultura Japonesa - Entre a Tradição e a Modernidade
 
    REQUISITO 7 - PALETA E TEORIA DAS CORES:
-   - Harmonia Escolhida: Combinação Triádica / Análoga Quente com Destaque
-   - Cor Principal: #1C2D42 (Azul Índigo Tradicional / Aizome)
-   - Cor Secundária: #FDFBF7 (Creme Papel Washi)
-   - Cor de Destaque (Accent): #D9381E (Vermelho Torii / Shu-iro)
-   - Cor de Fundo Geral: #F0EFEA (Cinza Pedra Soft)
-   - Cor de Texto Principal: #222426 (Preto Nanquim / Sumi-iro)
+   - Harmonia Escolhida: Combinação Monocromática / Contrastante com Branco
+   - Cor Principal: #111111 (Preto Carvão Nanquim)
+   - Cor Secundária: #FFFFFF (Branco Puro)
+   - Cor de Destaque (Accent): #BC002D (Vermelho Sol Nascente)
+   - Cor de Fundo Geral: #F8F9FA (Off-White Suave)
+   - Cor de Texto Principal: #222222 (Grafite Escuro)
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
    REQUISITO 12 - TIPOGRAFIA E CONFIGURAÇÕES GLOBAIS
    -------------------------------------------------------------------------- */
 html {
-    /* REQUISITO 4: Deslocamento suave entre as áreas da página */
     scroll-behavior: smooth;
 }
 
-/* REQUISITO 9: CSS Box Model (Reset universal para previsibilidade de box-sizing) */
 *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
@@ -30,11 +28,10 @@ html {
 }
 
 body {
-    /* REQUISITO 12: Tipografia legível, tamanhos, line-height e famílias de fonte */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    background-color: #F0EFEA; /* Cor de fundo geral da paleta */
-    color: #222426;            /* Cor de texto principal (garantindo contraste) */
+    background-color: #F8F9FA; /* Fundo geral off-white */
+    color: #222222;            /* Texto grafite */
 }
 
 /* Customização da Barra de Rolagem */
@@ -43,57 +40,55 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-    background: #F0EFEA;
+    background: #F8F9FA;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #1C2D42;
+    background: #111111;
     border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #D9381E;
+    background: #BC002D;
 }
 
 /* --------------------------------------------------------------------------
-   REQUISITO 3 & 8: CABEÇALHO (HEADER) - SELETORES DE TAG E CLASSE
+   REQUISITO 3 & 8: CABEÇALHO (HEADER)
    -------------------------------------------------------------------------- */
 .site-header {
-    background: linear-gradient(135deg, #1C2D42 0%, #111D2C 100%);
+    background: linear-gradient(135deg, #111111 0%, #222222 100%);
     color: #ffffff;
-    text-align: center;         /* REQUISITO 12: text-align */
-    padding: 45px 20px 0 20px;  /* REQUISITO 9: Padding */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    padding: 45px 20px 0 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* REQUISITO 5 & 12: Manutenção da hierarquia de títulos (h1, h2, h3) */
 .header-banner h1 {
-    font-size: 2.3rem;         /* REQUISITO 12: font-size */
+    font-size: 2.3rem;
     color: #ffffff;
-    margin-bottom: 10px;      /* REQUISITO 9: Margin */
-    font-weight: 700;          /* REQUISITO 12: font-weight */
+    margin-bottom: 10px;
+    font-weight: 700;
     letter-spacing: 0.5px;
 }
 
 .subtitle {
     font-size: 1.1rem;
-    color: #CBD5E1;
+    color: #E2E8F0;
     margin-bottom: 30px;
 }
 
 /* --------------------------------------------------------------------------
-   REQUISITO 4 & 11: MENU DE NAVEGAÇÃO - FLEXBOX E SELETORES DESCENDENTES
+   REQUISITO 4 & 11: MENU DE NAVEGAÇÃO
    -------------------------------------------------------------------------- */
 .main-nav {
-    background-color: #111D2C;
+    background-color: #111111;
     padding: 12px 0;
     position: sticky;
     top: 0;
     z-index: 100;
-    border-bottom: 3px solid #D9381E; /* Borda da cor de destaque */
+    border-bottom: 3px solid #BC002D; /* Borda vermelha */
 }
 
-/* REQUISITO 11: Display Flex, gap, justify-content e align-items */
 .main-nav ul {
     display: flex;
     justify-content: center;
@@ -103,65 +98,59 @@ body {
     gap: 15px;
 }
 
-/* REQUISITO 8: Seletor descendente (nav a / .main-nav a) */
 .main-nav a {
-    color: #F8FAFC;
-    text-decoration: none;     /* REQUISITO 12: text-decoration */
+    color: #ffffff;
+    text-decoration: none;
     font-weight: 600;
     padding: 8px 18px;
-    border-radius: 20px;       /* REQUISITO 9: border-radius */
+    border-radius: 20px;
     transition: all 0.3s ease;
 }
 
-/* REQUISITO 4 & 8: Destaque visual em links com a pseudoclasse :hover */
 .main-nav a:hover {
-    background-color: #D9381E; /* Cor de destaque */
+    background-color: #BC002D; /* Vermelho ao passar o mouse */
     color: #ffffff;
-    box-shadow: 0 2px 8px rgba(217, 56, 30, 0.4);
+    box-shadow: 0 2px 8px rgba(188, 0, 45, 0.4);
 }
 
 /* --------------------------------------------------------------------------
-   REQUISITO 9 & 11: ESTRUTURA DO CONTEÚDO PRINCIPAL (MAIN E SECTION)
+   REQUISITO 9 & 11: ESTRUTURA DO CONTEÚDO PRINCIPAL
    -------------------------------------------------------------------------- */
 .main-container {
-    max-width: 1000px;         /* REQUISITO 9 & 11: max-width para o conteúdo principal */
-    margin: 35px auto;         /* REQUISITO 11: Centraliza o conteúdo na página */
+    max-width: 1000px;
+    margin: 35px auto;
     padding: 0 20px;
 }
 
 .content-section {
-    background-color: #FDFBF7; /* Cor Secundária (Creme Washi Paper) */
+    background-color: #FFFFFF; /* Fundo dos cards em BRANCO PURO */
     padding: 35px;
     margin-bottom: 35px;
     border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 
 /* --------------------------------------------------------------------------
-   REQUISITO 10: AS 4 VARIAÇÕES OBRIGATÓRIAS DE BORDAS E ESPESSURAS
+   REQUISITO 10: AS 4 VARIAÇÕES OBRIGATÓRIAS DE BORDAS
    -------------------------------------------------------------------------- */
-/* 1. Borda contínua (solid) */
 .solid-border {
-    border: 3px solid #D9381E;
+    border: 3px solid #BC002D;
 }
 
-/* 2. Borda dupla (double) */
 .double-border {
-    border: 5px double #1C2D42;
+    border: 5px double #111111;
 }
 
-/* 3. Borda tracejada (dashed) */
 .dashed-border {
-    border: 3px dashed #94A3B8;
+    border: 3px dashed #CBD5E1;
 }
 
-/* 4. Borda pontilhada (dotted) — Aplicada nas imagens */
 .image-dotted {
-    border: 4px dotted #D9381E;
+    border: 4px dotted #BC002D;
 }
 
 /* --------------------------------------------------------------------------
-   REQUISITO 5 & 12: ESTILIZAÇÃO E ORGANIZAÇÃO DOS TÍTULOS E TEXTOS
+   REQUISITO 5 & 12: TIPOGRAFIA E ELEMENTOS DE TEXTO
    -------------------------------------------------------------------------- */
 h1, h2, h3, h4 {
     margin-bottom: 15px;
@@ -169,58 +158,56 @@ h1, h2, h3, h4 {
 
 h2 {
     font-size: 1.75rem;
-    color: #D9381E;            /* Cor de destaque */
-    border-left: 6px solid #D9381E;
+    color: #BC002D; /* Títulos em Vermelho */
+    border-left: 6px solid #BC002D;
     padding-left: 12px;
 }
 
 h3 {
     font-size: 1.3rem;
-    color: #1C2D42;            /* Cor principal */
+    color: #111111;
 }
 
 h4 {
     font-size: 1.1rem;
-    color: #334155;
+    color: #333333;
     margin-top: 15px;
 }
 
 p {
     margin-bottom: 15px;
     font-size: 1.02rem;
-    color: #334155;
+    color: #333333;
 }
 
-/* Links externos */
 .external-link {
-    color: #D9381E;
+    color: #BC002D;
     font-weight: bold;
     text-decoration: underline;
     transition: color 0.2s ease;
 }
 
 .external-link:hover {
-    color: #991B1E;
+    color: #8B0000;
 }
 
 /* --------------------------------------------------------------------------
-   REQUISITO 11: LAYOUT EM GRID E CARDS DE CONTEÚDO
+   REQUISITO 11: CARDS E GRID
    -------------------------------------------------------------------------- */
 .card, .highlight-article {
-    background-color: #F1F5F9;
+    background-color: #F8F9FA;
     padding: 22px;
     margin: 18px 0;
     border-radius: 8px;
-    border-left: 4px solid #1C2D42;
+    border-left: 4px solid #111111;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover, .highlight-article:hover {
     transform: translateY(-3px);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
 }
 
-/* REQUISITO 11: Uso obrigatório de display: grid e gap */
 .grid-2col {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -228,7 +215,6 @@ p {
     align-items: center;
 }
 
-/* REQUISITO 5: Listas ordenadas e não ordenadas */
 .custom-ol, .custom-ul {
     padding-left: 25px;
     margin-bottom: 15px;
@@ -239,15 +225,15 @@ p {
 }
 
 /* --------------------------------------------------------------------------
-   REQUISITO 13: TRATAMENTO E REGRAS DE IMAGENS
+   REQUISITO 13: IMAGENS
    -------------------------------------------------------------------------- */
 .styled-img {
     width: 100%;
-    max-width: 100%;            /* REQUISITO 13: Evita que ultrapassem o espaço disponível */
+    max-width: 100%;
     height: auto;
     display: block;
     object-fit: cover;
-    border-radius: 8px;         /* REQUISITO 13: Arredondamento */
+    border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s ease;
 }
@@ -257,12 +243,12 @@ p {
 }
 
 .image-solid {
-    border: 3px solid #1C2D42;
+    border: 3px solid #111111;
 }
 
 .image-rounded {
     border-radius: 14px;
-    border: 2px solid #CBD5E1;
+    border: 2px solid #E2E8F0;
 }
 
 .media-box {
@@ -275,13 +261,13 @@ p {
 }
 
 /* --------------------------------------------------------------------------
-   REQUISITO 14: ESTILIZAÇÃO DO BOTÃO "VOLTAR AO TOPO" (GERADO VIA JS)
+   REQUISITO 14: BOTÃO VOLTAR AO TOPO
    -------------------------------------------------------------------------- */
 .back-to-top-btn {
-    position: fixed;            /* REQUISITO 14: Posicionado no canto inferior */
+    position: fixed;
     bottom: 30px;
     right: 30px;
-    background-color: #D9381E;  /* Cor de destaque */
+    background-color: #BC002D;
     color: #ffffff;
     border: none;
     border-radius: 50%;
@@ -290,38 +276,37 @@ p {
     font-size: 22px;
     font-weight: bold;
     cursor: pointer;
-    box-shadow: 0 4px 14px rgba(217, 56, 30, 0.4);
+    box-shadow: 0 4px 14px rgba(188, 0, 45, 0.4);
     transition: all 0.3s ease;
     z-index: 1000;
     display: flex;
     justify-content: center;
     align-items: center;
-    opacity: 0;                 /* REQUISITO 14: Oculto por padrão até a rolagem */
+    opacity: 0;
     pointer-events: none;
 }
 
 .back-to-top-btn.visible {
-    opacity: 1;                 /* Exibido quando acionado pela classe do JS */
+    opacity: 1;
     pointer-events: auto;
 }
 
-/* REQUISITO 14: Alteração visual no botão ao passar o mouse */
 .back-to-top-btn:hover {
-    background-color: #1C2D42;  /* Transiciona para a cor principal */
+    background-color: #111111;
     transform: translateY(-5px);
-    box-shadow: 0 6px 16px rgba(28, 45, 66, 0.4);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
 }
 
 /* --------------------------------------------------------------------------
-   REQUISITO 3: RODAPÉ SEMÂNTICO (FOOTER)
+   REQUISITO 3: RODAPÉ (FOOTER)
    -------------------------------------------------------------------------- */
 .site-footer {
-    background-color: #1C2D42;  /* Cor Principal */
-    color: #F8FAFC;
+    background-color: #111111;
+    color: #ffffff;
     text-align: center;
     padding: 30px 20px;
     margin-top: 50px;
-    border-top: 5px solid #D9381E;
+    border-top: 5px solid #BC002D;
 }
 
 .footer-content p {
@@ -338,7 +323,7 @@ p {
 }
 
 /* --------------------------------------------------------------------------
-   REQUISITO 4: RESPONSIVIDADE (TELAS MENORES)
+   REQUISITO 4: RESPONSIVIDADE
    -------------------------------------------------------------------------- */
 @media (max-width: 768px) {
     .grid-2col {
